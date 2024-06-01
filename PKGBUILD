@@ -9,7 +9,6 @@ pkgdesc="Epson scanner management utility"
 url="http://support.epson.net/linux/en/epsonscan2.php"
 license=('GPL-3.0-or-later')
 depends=('libjpeg-turbo' 'libpng' 'libtiff' 'libusb' 'qt5-base' 'sane' 'zlib')
-#makedepends=('boost' 'cmake' 'libharu' 'qt5-singlecoreapplication' 'rapidjson')
 makedepends=('boost' 'cmake' 'qt5-singlecoreapplication' 'rapidjson')
 optdepends=('epsonscan2-non-free-plugin: OCR support and wireless scanning')
 options=('!buildflags')
