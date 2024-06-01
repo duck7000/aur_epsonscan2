@@ -3,13 +3,14 @@
 pkgname=epsonscan2
 pkgver=6.7.63.0
 _pkgver="$pkgver-1"
-pkgrel=2
+pkgrel=3
 arch=('armv7h' 'i686' 'x86_64')
 pkgdesc="Epson scanner management utility"
 url="http://support.epson.net/linux/en/epsonscan2.php"
 license=('GPL-3.0-or-later')
 depends=('libjpeg-turbo' 'libpng' 'libtiff' 'libusb' 'qt5-base' 'sane' 'zlib')
-makedepends=('boost' 'cmake' 'libharu' 'qt5-singlecoreapplication' 'rapidjson')
+#makedepends=('boost' 'cmake' 'libharu' 'qt5-singlecoreapplication' 'rapidjson')
+makedepends=('boost' 'cmake' 'qt5-singlecoreapplication' 'rapidjson')
 optdepends=('epsonscan2-non-free-plugin: OCR support and wireless scanning')
 options=('!buildflags')
 source=('https://download3.ebz.epson.net/dsc/f/03/00/15/17/69/0ef02802c476a6564f13cac929859c394f40326a/epsonscan2-6.7.63.0-1.src.tar.gz'
@@ -30,7 +31,7 @@ prepare() {
   sed -i '1 i #include "zlib.h"' \
          "$srcdir/$pkgname-$_pkgver/src/CommonUtility/DbgLog.cpp"
  
-  sed -i '/HaruPDF/d; /zlib/d' \
+  sed -i '/zlib/d' \
          "$srcdir/$pkgname-$_pkgver/src/Controller/CMakeLists.txt"
 
   # Stability improvements from Flatpak maintainers
