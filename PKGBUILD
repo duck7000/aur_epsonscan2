@@ -3,7 +3,7 @@
 pkgname=epsonscan2
 pkgver=6.7.70.0
 _pkgver="$pkgver-1"
-pkgrel=1
+pkgrel=2
 arch=('armv7h' 'i686' 'x86_64')
 pkgdesc="Epson scanner management utility"
 url="http://support.epson.net/linux/en/epsonscan2.php"
@@ -15,11 +15,13 @@ options=('!buildflags')
 source=('https://download3.ebz.epson.net/dsc/f/03/00/16/14/37/7577ee65efdad48ee2d2f38d9eda75418e490552/epsonscan2-6.7.70.0-1.src.tar.gz'
         '0002-Fix-crash.patch'
         '0003-Use-XDG-open-to-open-the-directory.patch'
-        '0004-Fix-a-crash-on-an-OOB-container-access.patch')
+        '0004-Fix-a-crash-on-an-OOB-container-access.patch'
+        '0005-Fix-folder-creation-crash.patch')
 b2sums=('f5f1952d6a808b1ae29da1013891b5248d2b5fd36bc833e370fe70d9f3cec46be737a60034491be6c401dc0cb58cbfc6b4c322238d194a2250d2795da02f824f'
         '9637be5374f6406b79b0004486764d4b6f8b3c113ac880df7c6baf87808807463627fc3d365d164ffc77644daf04d936b7a60e1f9514c36941e94c77377d2be7'
         '519ee6aaa8b395cc18249e42a4e52b9904d5d01798d47f7af33e8d0cdb96c0fdd70d750731baf8ada22cfd691b301dad6cd12d831c773da6b1953ef0ce467e21'
-        '9634925263f93a6601f65b0f998ec292a35f1e109a26c2e7a44c6e129c33fc9a12e92466c98c893f6ac7052f5009efb09270cd2cb62228df6f81b019488fa12f')
+        '9634925263f93a6601f65b0f998ec292a35f1e109a26c2e7a44c6e129c33fc9a12e92466c98c893f6ac7052f5009efb09270cd2cb62228df6f81b019488fa12f'
+        '055d80bf7c8d7e5c73c54e6fe7e9e0518c3c0160516b33f0669141ff6e1dbc8c49e5be5fe0a1ca3f5ec6172f2bb9f087df63a6624b244a1abe86ce44f01cbf25')
 
 prepare() {
   sed -i 's|/lib/udev|${CMAKE_INSTALL_PREFIX}/lib/udev|' \
@@ -35,13 +37,28 @@ prepare() {
   # https://github.com/flathub/net.epson.epsonscan2
   for file in 0002-Fix-crash \
               0003-Use-XDG-open-to-open-the-directory \
-              0004-Fix-a-crash-on-an-OOB-container-access
+              0004-Fix-a-crash-on-an-OOB-container-access \
+              0005-Fix-folder-creation-crash
   do
     patch --directory="$srcdir/$pkgname-$_pkgver" --forward --strip=1 --input="$srcdir/$file.patch"
   done
 
   # Remove improperly packaged CMake cache file
   rm "$srcdir/$pkgname-$_pkgver/CMakeCache.txt"
+
+  # Remove Boost setting in CMake config that crashes the package build
+  find "$srcdir/$pkgname-$_pkgver" -type f -name CMakeLists.txt \
+       -exec sed -i '/BOOST_NO_CXX11_RVALUE_REFERENCES/d' {} \;
+
+  for file in Standalone/lastusedsettings.cpp \
+              Standalone/defaultsettings.cpp \
+              CommonUtility/ESCommonTypedef.h \
+              Controller/Src/KeysValues/Key.hpp \
+              Controller/Src/KeysValues/KeyMgr.hpp
+  do
+    sed -i '/BOOST_NO_CXX11_RVALUE_REFERENCES/d' \
+           "$srcdir/$pkgname-$_pkgver/src/$file"
+  done
 }
 
 build() {
