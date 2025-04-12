@@ -3,7 +3,7 @@
 pkgname=epsonscan2
 pkgver=6.7.70.0
 _pkgver="$pkgver-1"
-pkgrel=2
+pkgrel=3
 arch=('armv7h' 'i686' 'x86_64')
 pkgdesc="Epson scanner management utility"
 url="http://support.epson.net/linux/en/epsonscan2.php"
@@ -58,6 +58,19 @@ prepare() {
   do
     sed -i '/BOOST_NO_CXX11_RVALUE_REFERENCES/d' \
            "$srcdir/$pkgname-$_pkgver/src/$file"
+  done
+
+  # Remove support for older versions of CMake in the configuration scripts
+  # (needed to build the package)
+  for dir in . \
+             src \
+             src/Standalone \
+             src/ScanSDK \
+             src/ScanSDK/Src/SDK/SCANSDKsample_C++ \
+             src/DetectAlert
+  do
+    sed -Ei '/cmake_minimum_required/ s/2\.([0-9+]|\.)+/4.0/' \
+            "$srcdir/$pkgname-$_pkgver/$dir/CMakeLists.txt"
   done
 }
 
