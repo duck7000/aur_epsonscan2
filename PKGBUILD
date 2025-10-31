@@ -17,7 +17,7 @@ source=('https://download3.ebz.epson.net/dsc/f/03/00/17/08/06/1babf9876ebb169564
         '0003-Use-XDG-open-to-open-the-directory.patch'
         '0004-Fix-a-crash-on-an-OOB-container-access.patch'
         '0005-Fix-folder-creation-crash.patch'
-        '0005-Fix-crash-no-serial-number.patch')
+        '0006-Fix-crash-no-serial-number.patch')
 b2sums=('2eeaf6bcb2734929ab9ae862a2051bdd6779ab1b0ab0dbd4dd318bf51d3f49b9b6846b8203d44e217f14b5b970187f923de2a395298da7db91616d4356d674a4'
         '9637be5374f6406b79b0004486764d4b6f8b3c113ac880df7c6baf87808807463627fc3d365d164ffc77644daf04d936b7a60e1f9514c36941e94c77377d2be7'
         '519ee6aaa8b395cc18249e42a4e52b9904d5d01798d47f7af33e8d0cdb96c0fdd70d750731baf8ada22cfd691b301dad6cd12d831c773da6b1953ef0ce467e21'
