@@ -10,5 +10,5 @@ This repo is for patching epsonscan2 to work on Arch based Linux. De standard AU
 
     makepkg -si
 
-    Install epsonscan2 non free plugin (it should be needed only for wireless scanning and pdf but my V330 will not work without it
+    Install epsonscan2 non free plugin (only needed for wireless scanning and OCR but my V330 will not work without it!)
     yay epsonscan2-non-free-plugin
