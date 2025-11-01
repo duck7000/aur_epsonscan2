@@ -11,5 +11,20 @@ This repo is for patching epsonscan2 to work on Arch based Linux. De standard AU
     makepkg -si
 
     Install epsonscan2 non free plugin
-    (only needed for wireless scanning and OCR but my V330 will not work without it!)
     yay epsonscan2-non-free-plugin
+
+The non free plugin is not only for OCR or Wireless scanning, some models do need a proprietary firmware!
+Here is a list of models that need firmware, get the device id through lsusb
+
+ATTRS{idProduct}=="0130", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw7c.bin"
+ATTRS{idProduct}=="0133", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw86.bin"
+ATTRS{idProduct}=="013a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwa1.bin"
+ATTRS{idProduct}=="013b", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfweb.bin"
+ATTRS{idProduct}=="013c", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw010c.bin"
+ATTRS{idProduct}=="013c", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw010c.bin"
+ATTRS{idProduct}=="013d", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw010c.bin"
+ATTRS{idProduct}=="013e", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0282.bin"
+ATTRS{idProduct}=="013f", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0282.bin"
+ATTRS{idProduct}=="0142", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwad.bin" (V330)
+ATTRS{idProduct}=="014a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwdd.bin"
+ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0111.bin"
