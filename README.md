@@ -2,7 +2,7 @@
 This repo is for patching epsonscan2 to work on Arch based Linux.
 De standard AUR version misses a important patch that prohibite some scanners to even open or finding a connected scanner
 
-Updated to version 7.6.82.0
+Updated to version 6.7.82.0
 
 First install all depencencys:<br>
 yay -S libjpeg-turbo libpng libtiff libusb qt5-base sane zlib boost cmake qt5-singlecoreapplication rapidjson bbe
