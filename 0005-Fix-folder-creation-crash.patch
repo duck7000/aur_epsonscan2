@@ -1,5 +1,5 @@
---- PathUtils.cpp	2025-04-24 07:44:37.000000000 +0200
-+++ PathUtils.cpp	2025-11-02 12:22:41.719977165 +0100
+--- orig/src/CommonUtility/utils/PathUtils.cpp	2025-04-24 07:44:37.000000000 +0200
++++ new/src/CommonUtility/utils/PathUtils.cpp	2025-11-02 12:22:41.719977165 +0100
 @@ -792,7 +792,6 @@
  						else
  						{
