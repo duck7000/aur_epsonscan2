@@ -15,16 +15,13 @@ diff --git a/src/Controller/Src/Finder/Finder.cpp b/src/Controller/Src/Finder/Fi
 index aa6b853..5e063e8 100755
 --- a/src/Controller/Src/Finder/Finder.cpp
 +++ b/src/Controller/Src/Finder/Finder.cpp
-@@ -52,6 +52,9 @@ namespace epsonscan {
-   }
-   SDIDeviceInfo* Finder::GetDevicesPointer()
-   {
-+   if (devices_.size() == 0) {
-+    return nullptr;
-+   }
-    return &devices_[0];
-   }
-   int32_t Finder::GetDevicesCount() const
--- 
-2.45.0
-
+@@ -41,6 +41,9 @@ namespace epsonscan
+ 		}
+ 		SDIDeviceInfo* Finder::GetDevicesPointer()
+ 		{
++            if (devices_.size() == 0) {
++                return nullptr;
++            }
+ 			return &devices_[0];
+ 		}
+ 	
