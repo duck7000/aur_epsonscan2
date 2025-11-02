@@ -38,7 +38,6 @@ prepare() {
   for file in 0002-Fix-crash \
               0003-Use-XDG-open-to-open-the-directory \
               0004-Fix-a-crash-on-an-OOB-container-access \
-              0005-Fix-folder-creation-crash \
               0005-Fix-crash-no-serial-number
   do
     patch --directory="$srcdir/$pkgname-$_pkgver" --forward --strip=1 --input="$srcdir/$file.patch"
