@@ -22,13 +22,13 @@ index 7480631..7df5941 100755
          //上に記載されているほど使用優先度が高い
 -        if(system("which nautilus > /dev/null") == 0){
 +        if(system("which xdg-open > /dev/null") == 0){
-++            cmd_size = strlen("xdg-open ");
-++            failer = (char *)malloc(cmd_size+1);
-++            if(failer){
-++               memset(failer, 0, cmd_size+1);
-++               memcpy(failer, "xdg-open", cmd_size);
-++            }
-++        } else if(system("which nautilus > /dev/null") == 0){
++            cmd_size = strlen("xdg-open ");
++            failer = (char *)malloc(cmd_size+1);
++            if(failer){
++               memset(failer, 0, cmd_size+1);
++               memcpy(failer, "xdg-open", cmd_size);
++            }
++        }else if(system("which nautilus > /dev/null") == 0){
              cmd_size = strlen("nautilus ");
              failer = (char *)malloc(cmd_size+1);
              if(failer){
