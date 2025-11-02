@@ -13,7 +13,7 @@ cd aur_epsonscan2
 
 makepkg -si
 
-Install epsonscan2 non free plugin:
+Install epsonscan2 non free plugin:<br>
 yay epsonscan2-non-free-plugin
 
 The non free plugin is not only for OCR or Wireless scanning, some models do need a proprietary firmware!
