@@ -24,7 +24,6 @@ ATTRS{idProduct}=="0133", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 ATTRS{idProduct}=="013a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwa1.bin"<br>
 ATTRS{idProduct}=="013b", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfweb.bin"<br>
 ATTRS{idProduct}=="013c", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw010c.bin"<br>
-ATTRS{idProduct}=="013c", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw010c.bin"<br>
 ATTRS{idProduct}=="013d", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw010c.bin"<br>
 ATTRS{idProduct}=="013e", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0282.bin"<br>
 ATTRS{idProduct}=="013f", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0282.bin"<br>
