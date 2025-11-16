@@ -1,0 +1,10 @@
+--- orig/src/CommonUtility/utils/PathUtils.cpp	2025-04-24 07:44:37.000000000 +0200
++++ new/src/CommonUtility/utils/PathUtils.cpp	2025-11-16 21:13:00.859115329 +0100
+@@ -792,7 +792,6 @@
+ 						else
+ 						{
+ 							bResult = TRUE;
+-							break;
+ 						}
+ 					}
+ #endif
