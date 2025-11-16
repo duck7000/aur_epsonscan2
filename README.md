@@ -4,7 +4,7 @@ De standard AUR version misses a important patch that prohibite some scanners to
 
 Updated to version 6.7.82.0
 
-First install all depencencys:<br>
+First install all depencencies:<br>
 yay -S libjpeg-turbo libpng libtiff libusb qt5-base sane zlib boost cmake qt5-singlecoreapplication rapidjson bbe
     
 git clone https://github.com/duck7000/aur_epsonscan2.git
