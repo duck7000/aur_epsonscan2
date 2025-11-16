@@ -34,16 +34,15 @@ ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 
 
 GT-X830<br>
-Perfection V19<br>
+Perfection V19 (idProduct=="013c")<br>
 Perfection V19II<br>
-Perfection V33 / GT-S630<br>
-Perfection V37 / GT-S640<br>
-Perfection V39 / GT-S650<br>
+Perfection V37 / GT-S640 (idProduct=="014a")<br>
+Perfection V39 / GT-S650 (idProduct=="013d")<br>
 Perfection V39II / GT-S660<br>
 Perfection V500 / GT-X770<br>
-Perfection V330 / GT-F730 (idProduct=="0142")<br>
+Perfection V33 / V330 / GT-S630 / GT-F730 (idProduct=="0142")<br>
 Perfection V370 / GT-F740<br>
-Perfection V550<br>
-Perfection V600 / GT-X820<br>
+Perfection V550 (idProduct=="013b")<br>
+Perfection V600 / GT-X820 (idProduct=="013a")<br>
 WorkForce GT-1500 / GT-D1000<br>
 
