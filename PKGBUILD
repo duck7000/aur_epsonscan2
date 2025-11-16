@@ -43,7 +43,7 @@ prepare() {
               0005-Fix-crash-no-serial-number \
               0006-Fix-folder-creation-crash
   do
-    patch --directory="$srcdir/$pkgname-$_pkgver" --forward --strip=1 --input="$srcdir/$file.patch"
+    patch --directory="$srcdir/$pkgname-$_pkgver" --forward --binary --strip=1 --input="$srcdir/$file.patch"
   done
 
   # Remove Boost setting in CMake config that crashes the package build
