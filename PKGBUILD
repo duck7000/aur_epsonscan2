@@ -1,7 +1,7 @@
 # Maintainer: Tércio Martins <echo dGVyY2lvd2VuZGVsQGdtYWlsLmNvbQo= | base64 -d>
 
 pkgname=epsonscan2
-pkgver=6.7.82.0
+pkgver=6.7.87.0
 _pkgver="$pkgver-1"
 pkgrel=1
 arch=('armv7h' 'i686' 'x86_64')
@@ -12,13 +12,13 @@ depends=('libjpeg-turbo' 'libpng' 'libtiff' 'libusb' 'qt5-base' 'sane' 'zlib')
 makedepends=('boost' 'cmake' 'qt5-singlecoreapplication' 'rapidjson')
 optdepends=('epsonscan2-non-free-plugin: OCR support and wireless scanning')
 options=('!buildflags')
-source=('https://download-center.epson.com/f/module/7406d656-d87b-43ae-8efe-16ab16c173c5/epsonscan2-6.7.82.0-1.src.tar.gz'
+source=('https://download-center.epson.com/f/module/209cf792-ab67-473b-af60-15b8e72ed438/epsonscan2-6.7.87.0-1.src.tar.gz'
         '0002-Fix-crash.patch'
         '0003-Use-XDG-open-to-open-the-directory.patch'
         '0004-Fix-a-crash-on-an-OOB-container-access.patch'
         '0005-Fix-crash-no-serial-number.patch'
         '0006-Fix-folder-creation-crash.patch')
-b2sums=('fd530ccaa159996a90f7ad278bf2827971bf6376cb3dc528909a63773dd8ad7ee0954d9336ad3a7c57e855881f8857492d53a9ac1f4b37e726247ace3277cdd3'
+b2sums=('0e9ce73d830532e3c0bc188e066fea6df3900bbfb9dd0b9c7179f6baf98b282344b6a51589e408dbafda91b59404e9cca58b787258a5aa8fc33e003d553a0c13'
         '9637be5374f6406b79b0004486764d4b6f8b3c113ac880df7c6baf87808807463627fc3d365d164ffc77644daf04d936b7a60e1f9514c36941e94c77377d2be7'
         '0709b3fa136fb06d630e1140856c48243fe1f49d01c5c193b690acd04d75d41527162a3e006b452285f11e557726a4405682d1a4153241a5c94bb53c959e3179'
         'f788de817d7543efaa43e7fdf56a00f168f74777fdf2ccbdee509c4786cbd1fdbed6deb65d8caa85159eb2c333323fb2a392d60ad202e22d2bc1353c344fb7f1'
