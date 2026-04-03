@@ -12,7 +12,7 @@ depends=('libjpeg-turbo' 'libpng' 'libtiff' 'libusb' 'qt5-base' 'sane' 'zlib')
 makedepends=('boost' 'cmake' 'qt5-singlecoreapplication' 'rapidjson')
 optdepends=('epsonscan2-non-free-plugin: OCR support and wireless scanning')
 options=('!buildflags')
-source=('https://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=JA&CN2=US&CTI=171&PRN=Linux%20src%20package&OSC=LX&DL'
+source=('https://download3.ebz.epson.net/dsc/f/03/00/17/08/06/1babf9876ebb16956420a601b92ee28b57cd7db7/epsonscan2-6.7.80.0-1.src.tar.gz'
         '0002-Fix-crash.patch'
         '0003-Use-XDG-open-to-open-the-directory.patch'
         '0004-Fix-a-crash-on-an-OOB-container-access.patch'
