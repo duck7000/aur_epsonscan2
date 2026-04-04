@@ -13,6 +13,7 @@ makedepends=('boost' 'cmake' 'qt5-singlecoreapplication' 'rapidjson' 'bbe')
 optdepends=('epsonscan2-non-free-plugin: OCR support and wireless scanning')
 options=('!buildflags')
 source=('https://download-center.epson.com/f/module/1ef33427-5366-4a18-9726-c44197b04301/epsonscan2-6.7.87.0-1.src.tar.gz'
+        'https://download-center.epson.com/f/module/30ef581b-81ba-4f6e-ab0f-6c74117e766b/epsonscan2-bundle-6.7.87.0.x86_64.deb.tar.gz'
         '0002-Fix-crash.patch'
         '0003-Use-XDG-open-to-open-the-directory.patch'
         '0004-Fix-a-crash-on-an-OOB-container-access.patch'
