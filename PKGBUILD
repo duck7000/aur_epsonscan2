@@ -18,6 +18,9 @@ source=('https://download-center.epson.com/f/module/1ef33427-5366-4a18-9726-c441
         '0004-Fix-a-crash-on-an-OOB-container-access.patch'
         '0005-Fix-crash-no-serial-number.patch'
         '0006-Fix-folder-creation-crash.patch')
+DLAGENTS=(
+  "https::/usr/bin/curl -A 'Mozilla' -fLC - --retry 3 --retry-delay 3 -o %o %u"
+)
 b2sums=('0e9ce73d830532e3c0bc188e066fea6df3900bbfb9dd0b9c7179f6baf98b282344b6a51589e408dbafda91b59404e9cca58b787258a5aa8fc33e003d553a0c13'
         '9637be5374f6406b79b0004486764d4b6f8b3c113ac880df7c6baf87808807463627fc3d365d164ffc77644daf04d936b7a60e1f9514c36941e94c77377d2be7'
         '0709b3fa136fb06d630e1140856c48243fe1f49d01c5c193b690acd04d75d41527162a3e006b452285f11e557726a4405682d1a4153241a5c94bb53c959e3179'
