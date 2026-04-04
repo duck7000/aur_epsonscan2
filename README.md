@@ -7,7 +7,7 @@ Updated to version 6.7.82.0<br>
 Updated to version 6.7.87.0
 
 First install all depencencies:<br>
-yay -S libjpeg-turbo libpng libtiff libusb qt5-base sane zlib boost cmake qt5-singlecoreapplication rapidjson bbe
+yay -S libjpeg-turbo libpng libtiff libusb qt5-base sane zlib boost cmake qt5-singlecoreapplication rapidjson bbe libharu
     
 git clone https://github.com/duck7000/aur_epsonscan2.git
 
