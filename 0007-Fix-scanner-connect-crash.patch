@@ -1,0 +1,10 @@
+--- a/src/Controller/Src/Scanner/Engine.cpp	2025-10-21 00:59:55.000000000 +0000
++++ b/src/Controller/Src/Scanner/Engine.cpp	2026-04-28 19:26:06.000000000 +0000
+@@ -8,7 +8,7 @@
+ 
+ static std::string GetPluginPath()
+ {
+-    return "/usr/libexec/epsonscan2-ocr/ocr-engine-getrotate" ;
++    return "/usr/lib/epsonscan2-ocr/ocr-engine-getrotate" ;
+ }
+void  Engine::ScannerWillBeginContinuousScanning(IESScanner* pScanner)
