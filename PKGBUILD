@@ -17,7 +17,8 @@ source=('https://download-center.epson.com/f/module/1ef33427-5366-4a18-9726-c441
         '0003-Use-XDG-open-to-open-the-directory.patch'
         '0004-Fix-a-crash-on-an-OOB-container-access.patch'
         '0005-Fix-crash-no-serial-number.patch'
-        '0006-Fix-folder-creation-crash.patch')
+        '0006-Fix-folder-creation-crash.patch'
+        '0007-Fix-scanner-connect-crash.patch')
 DLAGENTS=(
   "https::/usr/bin/curl -A 'Mozilla' -fLC - --retry 3 --retry-delay 3 -o %o %u"
 )
@@ -26,7 +27,8 @@ b2sums=('0e9ce73d830532e3c0bc188e066fea6df3900bbfb9dd0b9c7179f6baf98b282344b6a51
         '0709b3fa136fb06d630e1140856c48243fe1f49d01c5c193b690acd04d75d41527162a3e006b452285f11e557726a4405682d1a4153241a5c94bb53c959e3179'
         'f788de817d7543efaa43e7fdf56a00f168f74777fdf2ccbdee509c4786cbd1fdbed6deb65d8caa85159eb2c333323fb2a392d60ad202e22d2bc1353c344fb7f1'
         '282a18ad086446f290d795141d63235e67416cea894945d2c65dac7ffa36b3288ef920ef627df349f06e5f482b16e8fa6dbd0064db4b701437a01b913bd8a3fb'
-        '4561d42cbbd6ae12ac62808e6cdc3d81c7f412a7bd67daaf0c1ca250bfd4da4886192145627146185f55016bfe73daebd23e0884563bf70279d1bbb9fbdf63cc')
+        '4561d42cbbd6ae12ac62808e6cdc3d81c7f412a7bd67daaf0c1ca250bfd4da4886192145627146185f55016bfe73daebd23e0884563bf70279d1bbb9fbdf63cc'
+        '9293ba06edd38b48f0222240d6c956fa731afe0a2c49221bb3604b44cee64be60c091f54d1cbe1be4275f0e16f690e05625e96a2287058fcb9bbcd6167b9ccca')
 
 prepare() {
   sed -i 's|/lib/udev|${CMAKE_INSTALL_PREFIX}/lib/udev|' \
@@ -44,7 +46,8 @@ prepare() {
               0003-Use-XDG-open-to-open-the-directory \
               0004-Fix-a-crash-on-an-OOB-container-access \
               0005-Fix-crash-no-serial-number \
-              0006-Fix-folder-creation-crash
+              0006-Fix-folder-creation-crash \
+              0007-Fix-scanner-connect-crash
   do
     patch --directory="$srcdir/$pkgname-$_pkgver" --forward --binary --strip=1 --input="$srcdir/$file.patch"
   done
