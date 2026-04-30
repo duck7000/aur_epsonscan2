@@ -82,8 +82,6 @@ prepare() {
   # Fix compilation failure caused by GCC 15
   sed -i '/SET.*FLAGS/ s/")/ -Wno-template-body")/' \
          "$srcdir/$pkgname-$_pkgver/src/ES2Command/Linux/CMakeLists.txt"
-  sed -i '/#include/ i #include <cmath>' \
-         "$srcdir/$pkgname-$_pkgver/src/Controller/Src/Filter/GrayToMono.hpp"
 }
 
 build() {
