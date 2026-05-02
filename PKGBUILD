@@ -102,4 +102,7 @@ package() {
                  "$pkgdir/usr/share/applications/$pkgname.desktop"
 
   install -d $pkgdir/usr/lib/sane ; cd $pkgdir/usr/lib/sane
+  ln -s ../$pkgname/libsane-epsonscan2.so libsane-epsonscan2.so
+  ln -s ../$pkgname/libsane-epsonscan2.so libsane-epsonscan2.so.1
+  ln -s ../$pkgname/libsane-epsonscan2.so libsane-epsonscan2.so.1.0.0
 }
