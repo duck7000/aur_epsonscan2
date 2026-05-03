@@ -33,18 +33,31 @@ ATTRS{idProduct}=="0142", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 ATTRS{idProduct}=="014a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwdd.bin"<br>
 ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0111.bin"<br>
 <table>
-    <td>Perfection V600 / GT-X820</td>                    <td>(idProduct=="013a")<br></td>
+    <td>Perfection V600 / GT-X820</td>                    <td>(idProduct=="013a")</td>
+    
     <td>Perfection V550</td>                              <td>(idProduct=="013b")</td>
+    
     <td>Perfection V19</td>                               <td>(idProduct=="013c")</td>
+    
     <td>Perfection V39 / GT-S650</td>                     <td>(idProduct=="013d")</td>
+    
     <td>Perfection V37/V370/GT-S640/F740</td>             <td>(idProduct=="014a")</td>
+    
     <td>Perfection V33 / V330 / GT-S630 / GT-F730</td>    <td>(idProduct=="0142")</td>
+    
     <td>Perfection V19II</td>                             <td>(Unknown)</td>
+    
     <td>Perfection V39II / GT-S660</td>                   <td>(Unknown)</td>
+    
     <td>Perfection V500 / GT-X770</td>                    <td>(Unknown)</td>
+    
     <td>WorkForce GT-1500 / GT-D1000</td>                 <td>(Unknown)</td>
+    
     <td>DS-5500/DS-6500/DS-7500</td>                      <td>(idProduct=="0x145")</td>
+    
     <td>DS-50000/DS-60000/DS-70000</td>                   <td>(idProduct=="0x146")</td>
+    
     <td>GT-X830</td>                                      <td>(Unknown)</td>
+    
 </table>
 
