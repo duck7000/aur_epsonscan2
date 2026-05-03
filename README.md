@@ -41,14 +41,14 @@ ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
     Perfection V19                               (idProduct=="013c")
     
     Perfection V39 / GT-S650                     (idProduct=="013d")
+
+    Perfection V39II / GT-S660                   (idProduct=="013f")
     
     Perfection V37/V370/GT-S640/F740             (idProduct=="014a")
     
     Perfection V33 / V330 / GT-S630 / GT-F730    (idProduct=="0142")
     
     Perfection V19II                             (Unknown)
-    
-    Perfection V39II / GT-S660                   (idProduct=="013f")
     
     Perfection V500 / GT-X770                    (Unknown)
     
