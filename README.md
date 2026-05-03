@@ -33,7 +33,8 @@ ATTRS{idProduct}=="0142", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 ATTRS{idProduct}=="014a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwdd.bin"<br>
 ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0111.bin"<br>
 <table>
-    <td>Perfection V600 / GT-X820</td>                    <td>(idProduct=="013a")</td><br>
+    <td>Perfection V600 / GT-X820</td>                    
+    <td>(idProduct=="013a")</td>
     <td>Perfection V550</td>                              <td>(idProduct=="013b")</td>
     <td>Perfection V19</td>                               <td>(idProduct=="013c")</td>
     <td>Perfection V39 / GT-S650</td>                     <td>(idProduct=="013d")</td>
