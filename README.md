@@ -48,7 +48,7 @@ ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
     
     Perfection V19II                             (Unknown)
     
-    Perfection V39II / GT-S660                   (Unknown)
+    Perfection V39II / GT-S660                   (idProduct=="013f")
     
     Perfection V500 / GT-X770                    (Unknown)
     
