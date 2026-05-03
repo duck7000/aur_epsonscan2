@@ -33,13 +33,13 @@ ATTRS{idProduct}=="0142", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 ATTRS{idProduct}=="014a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwdd.bin"<br>
 ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0111.bin"<br>
 
-Perfection V600 / GT-X820                   (idProduct=="013a")<br>
-Perfection V550                             (idProduct=="013b")<br>
+Perfection V600 / GT-X820                    (idProduct=="013a")<br>
+Perfection V550                               (idProduct=="013b")<br>
 Perfection V19                              (idProduct=="013c")<br>
 Perfection V39 / GT-S650                    (idProduct=="013d")<br>
-Perfection V37/V370/GT-S640/F740            (idProduct=="014a")<br>
-Perfection V33 / V330 / GT-S630 / GT-F730   (idProduct=="0142")<br>
-DS-5500/DS-6500/DS-7500                     (idProduct=="0x145")<br>
+Perfection V37/V370/GT-S640/F740                (idProduct=="014a")<br>
+Perfection V33 / V330 / GT-S630 / GT-F730        (idProduct=="0142")<br>
+DS-5500/DS-6500/DS-7500                             (idProduct=="0x145")<br>
 DS-50000/DS-60000/DS-70000                  (idProduct=="0x146")<br>
 GT-X830<br>
 Perfection V19II<br>
