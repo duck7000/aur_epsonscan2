@@ -34,29 +34,29 @@ ATTRS{idProduct}=="014a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0111.bin"<br>
 
 
-    Perfection V600 / GT-X820                   (idProduct=="013a")
+    Perfection V600 / GT-X820                    (idProduct=="013a")
     
-    <td>Perfection V550</td>                              <td>(idProduct=="013b")</td>
+    Perfection V550                              (idProduct=="013b")
     
-    <td>Perfection V19</td>                               <td>(idProduct=="013c")</td>
+    Perfection V19                               (idProduct=="013c")
     
-    <td>Perfection V39 / GT-S650</td>                     <td>(idProduct=="013d")</td>
+    Perfection V39 / GT-S650                     (idProduct=="013d")
     
-    <td>Perfection V37/V370/GT-S640/F740</td>             <td>(idProduct=="014a")</td>
+    Perfection V37/V370/GT-S640/F740             (idProduct=="014a")
     
-    <td>Perfection V33 / V330 / GT-S630 / GT-F730</td>    <td>(idProduct=="0142")</td>
+    Perfection V33 / V330 / GT-S630 / GT-F730    (idProduct=="0142")
     
-    <td>Perfection V19II</td>                             <td>(Unknown)</td>
+    Perfection V19II                             (Unknown)
     
-    <td>Perfection V39II / GT-S660</td>                   <td>(Unknown)</td>
+    Perfection V39II / GT-S660                   (Unknown)
     
-    <td>Perfection V500 / GT-X770</td>                    <td>(Unknown)</td>
+    Perfection V500 / GT-X770                    (Unknown)
     
-    <td>WorkForce GT-1500 / GT-D1000</td>                 <td>(Unknown)</td>
+    WorkForce GT-1500 / GT-D1000                 (Unknown)
     
-    <td>DS-5500/DS-6500/DS-7500</td>                      <td>(idProduct=="0x145")</td>
+    DS-5500/DS-6500/DS-7500                      (idProduct=="0x145")
     
-    <td>DS-50000/DS-60000/DS-70000</td>                   <td>(idProduct=="0x146")</td>
+    DS-50000/DS-60000/DS-70000                   (idProduct=="0x146")
     
-    <td>GT-X830</td>                                      <td>(Unknown)</td>
+    GT-X830                                      (Unknown)
 
