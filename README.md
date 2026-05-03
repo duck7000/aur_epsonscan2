@@ -32,8 +32,9 @@ ATTRS{idProduct}=="013f", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
 ATTRS{idProduct}=="0142", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwad.bin" (V330)<br>
 ATTRS{idProduct}=="014a", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfwdd.bin"<br>
 ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esfw0111.bin"<br>
-
-Perfection V600 / GT-X820                    (idProduct=="013a")<br>
+<table>
+    <td>Perfection V600 / GT-X820</td>
+    <td>(idProduct=="013a")</td>
 Perfection V550                               (idProduct=="013b")<br>
 Perfection V19                              (idProduct=="013c")<br>
 Perfection V39 / GT-S650                    (idProduct=="013d")<br>
@@ -46,4 +47,5 @@ Perfection V19II<br>
 Perfection V39II / GT-S660<br>
 Perfection V500 / GT-X770<br>
 WorkForce GT-1500 / GT-D1000<br>
+</table>
 
