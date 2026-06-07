@@ -50,9 +50,9 @@ ATTRS{idProduct}=="0153", ENV{epsonscan2_driver}="esci", ENV{firmware_file}="esf
     
     Perfection V19II                             (Unknown)
     
-    Perfection V500 / GT-X770                    (Unknown)
+    Perfection V500 / GT-X770                    (idProduct=="0130") (NOT SUPPORTED BY EPSONSCAN2)
     
-    WorkForce GT-1500 / GT-D1000                 (Unknown)
+    WorkForce GT-1500 / GT-D1000                 (Unknown) (NOT SUPPORTED BY EPSONSCAN2)
     
     DS-5500/DS-6500/DS-7500                      (idProduct=="0x145")
     
