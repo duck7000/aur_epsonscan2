@@ -1,0 +1,54 @@
+From 32d2dcded78791bef9e8db999df04ceb68e0def6 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=C5=81ukasz=20Michalski?= <lukasz.michalski@infoklinika.pl>
+Date: Sat, 7 Nov 2026 19:04:45 +0100
+Subject: [PATCH] Fix crash with a simplex-only document feeder
+
+Scanners whose ADF scans one side only (e.g. EcoTank L6270) report an
+empty DuplexType capability list. create_functionalunit_list() only
+added the ADF sources for a duplex count of 1 or 2, so the feeder was
+dropped from the source list, and the loop read one element past the
+end of the FunctionalUnit list, adding a second "Flatbed".
+
+With the feeder saved as the selected functional unit, the lookup of
+"ADF Front" then returned -1 and OPT_SOURCE was left at -1, which
+crashes sane_control_option() (strcpy) and sane_start() (strcmp) on
+a NULL string list entry.
+
+Add the simplex ADF sources whenever the duplex list does not offer
+both sides, stop the loop at the end of the list, and fall back to the
+first source if the selected one is not in the list.
+---
+ src/SaneWrapper/epsonscan.cpp | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/src/SaneWrapper/epsonscan.cpp b/src/SaneWrapper/epsonscan.cpp
+index 0d91cfb..e55b744 100644
+--- a/src/SaneWrapper/epsonscan.cpp
++++ b/src/SaneWrapper/epsonscan.cpp
+@@ -478,6 +478,9 @@ init_options (Epson_Scanner * s)
+   } else {
+     s->val[OPT_SOURCE].w = 0;
+   }
++  if (s->val[OPT_SOURCE].w < 0) {
++    s->val[OPT_SOURCE].w = 0;
++  }
+ 
+ 
+   /* resolution */
+@@ -1356,14 +1359,14 @@ create_functionalunit_list (device *dev, int32_t item_list[], int32_t list_size,
+   }
+ 
+   i = 0;
+-  while(i < list_size + 1){
++  while(i < list_size){
+     if(item_list[i] == kSDIFunctionalUnitFlatbed){
+       dev->doc_sources[current++] = FB_STR;
+     }else if(item_list[i] == kSDIFunctionalUnitDocumentFeeder && duplex_item_list_count == 2){
+       dev->doc_sources[current++] = ADF_STR;
+       dev->doc_sources[current++] = ADF_FRONT_STR;
+       dev->doc_sources[current++] = ADF_DUPLEX_STR;
+-    }else if (item_list[i] == kSDIFunctionalUnitDocumentFeeder && duplex_item_list_count == 1){
++    }else if (item_list[i] == kSDIFunctionalUnitDocumentFeeder){
+       dev->doc_sources[current++] = ADF_STR;
+       dev->doc_sources[current++] = ADF_FRONT_STR;
+     }else if(item_list[i] == kSDIFunctionalUnitCarrierSheet){

@@ -5,7 +5,7 @@ _epsonscan2_non_free_plugin_version='1.0.0.6'
 pkgname=epsonscan2
 pkgver=6.7.93.0
 _pkgver="$pkgver-1"
-pkgrel=1
+pkgrel=2
 arch=('armv7h' 'x86_64')
 pkgdesc="Epson scanner management utility"
 url="https://download-center.epson.com/"
@@ -19,7 +19,8 @@ source=('https://download-center.epson.com/f/module/e7a805fc-f4b6-4c67-8b5a-3529
         '0003-Use-XDG-open-to-open-the-directory.patch'
         '0005-Fix-folder-creation-crash.patch'
         '0006-Fix-crash-no-serial-number.patch'
-        '0007-Detect-scanners-that-need-firmware.patch')
+        '0007-Detect-scanners-that-need-firmware.patch'
+        '0008-Fix-crash-simplex-only-ADF.patch')
 source_armv7h=('https://download-center.epson.com/f/module/06751d02-fa70-4bde-b08c-571d81f71517/epsonscan2-bundle-6.7.93.0.armv7l.deb.tar.gz')
 source_x86_64=('https://download-center.epson.com/f/module/1b1a2752-0879-4879-9bf9-081006a90185/epsonscan2-bundle-6.7.93.0.x86_64.deb.tar.gz')
 b2sums=('5bcf92acd3528f14811dc6840b0b99477ad14192c84c1a7940f5f7129dabb12cb704b34083b4657e2cb7583807005e7219e6cce416bec70bd58954570d5ad958'
@@ -27,7 +28,8 @@ b2sums=('5bcf92acd3528f14811dc6840b0b99477ad14192c84c1a7940f5f7129dabb12cb704b34
         'e398e821704599be0b6ba9192c32411f92650f2e455b088718ba4b643562c21bc02044df30affe2b7ea99069cd0c1c59902e586e9de7e1bb9b3e0ae013c9e30d'
         '5e2af573e616a6afaeb4b9035e54f5a0e05684f194a5fac52eb9ced619fdc156a62ab22bcf62af14a058f74d80a6606abf5e056ea720109c013624802d4b62e5'
         '282a18ad086446f290d795141d63235e67416cea894945d2c65dac7ffa36b3288ef920ef627df349f06e5f482b16e8fa6dbd0064db4b701437a01b913bd8a3fb'
-        '5a3416356913438cfe901195198b0c00167d69f726ef2913e2dc209151d4c1b736c2a608e8b556bc201acc320548a56263f2782fdb79249c46e490ef756c2700')
+        '5a3416356913438cfe901195198b0c00167d69f726ef2913e2dc209151d4c1b736c2a608e8b556bc201acc320548a56263f2782fdb79249c46e490ef756c2700'
+        'e8039f0d036c762ec53d51c46425267c22a759725d05c7c6e55a81280a628a4351d7ebe5e9d728a9e9e8b3ba51b105c9980773f89088dbaefc56619466c473f8')
 b2sums_armv7h=('bd261c29b04fe8570af997f015d65c2c42d92aed46dc835b0180a71962a0ab373b8df37d08ff8512ada14e5da901c0354e9271066757b9341143ef03be5addff')
 b2sums_x86_64=('19bd96799ffc16b202c86be5d70289950277a15ec956229c3f53b4ecd33016f38ff835c3add110a25cce5f8713e671fae3752cb004165d98117698189cf70a49')
 
@@ -66,6 +68,10 @@ prepare() {
     patch --directory="$srcdir/$pkgname-$_pkgver" --forward --binary \
           --strip=1 --input="$srcdir/$file.patch"
   done
+
+  # Fix a crash when the document feeder scans one side only (empty duplex list)
+  patch --directory="$srcdir/$pkgname-$_pkgver" --forward --binary \
+        --strip=1 --input="$srcdir/0008-Fix-crash-simplex-only-ADF.patch"
 
   # Remove Boost setting in CMake config that crashes the package build
   find "$srcdir/$pkgname-$_pkgver" -type f -name CMakeLists.txt \
